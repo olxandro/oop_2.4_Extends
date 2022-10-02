@@ -1,3 +1,5 @@
+import Animals.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -17,5 +19,35 @@ public class Main {
         System.out.println(three);
 
         one.refill();
+
+        Amphibians legs = new Amphibians("ляха", 2, null);
+        Amphibians yj = new Amphibians("уж", null, "болото");
+
+
+        Herbivores gazel = new Herbivores("gazel", null, null, -1, null);
+        Herbivores jiraff = new Herbivores("jiraf", 22, "africa", 22, "grass");
+        Herbivores horse = new Herbivores("horse", 11, "russia", 33, "apple");
+        System.out.println(gazel.getEat());
+        System.out.println(gazel.getLivingEnvironment());
+        System.out.println(gazel.getSpeed());
+        gazel.graze();
+        gazel.eat();
+        gazel.sleep();
+        System.out.println(gazel);
+
+        Predators giena = new Predators("giena", 11, "africa", 13, "jiraf");
+        Predators tiger = new Predators("tiger", 16, "india", 13, "gazel");
+        Predators bear = new Predators("bear", 8, "forest", 13, "berries");
+
+        Flightless pavlin = new Flightless("pavlin", 5,"india","пеший");
+        Flightless pingvin = new Flightless("pingvin",7,"arktica","пеший");
+        Flightless birdDodo = new Flightless("dodo",4,"america","пеший");
+        birdDodo.sleep();
+        birdDodo.going();
+        Fly chaika = new Fly("Чайка", 22, "sea", "fly");
+        Fly albatros = new Fly("альбатрос", 11, "sea", "fly");
+        Fly sokol = new Fly("сокол", 2, "лес", "fly");
+        albatros.flying();
+        System.out.println(albatros);
     }
 }
