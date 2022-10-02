@@ -1,6 +1,7 @@
+import java.time.LocalDate;
 import java.util.Objects;
 
-public class Transport {
+public abstract class Transport {
     private String brand;
     private String model;
     private int productionYear;
@@ -8,13 +9,17 @@ public class Transport {
     private String color;
     private Integer maxSped;
 
-    public Transport(String brand, String model, int dateCreat, String country, String color, Integer maxSped) {
+    public Transport(String brand, String model, int productionYear, String country, String color, Integer maxSped) {
         this.brand = brand;
         this.model = model;
-        this.productionYear = productionYear;
-        this.country = Objects.requireNonNullElse(country,"filipini");
-        setColor(color);
-        setMaxSped(maxSped);
+        if (productionYear > LocalDate.now().getYear()) {
+            this.productionYear = productionYear;
+        } else {
+            this.productionYear = LocalDate.now().getYear();
+            this.country = Objects.requireNonNullElse(country, "Russia");
+            setColor(color);
+            setMaxSped(maxSped);
+        }
     }
 
     public String getStamp() {
@@ -50,12 +55,14 @@ public class Transport {
     }
 
     public void setMaxSped(Integer maxSped) {
-        if (maxSped!=null && maxSped!=0){
+        if (maxSped != null && maxSped != 0){
             this.maxSped = maxSped;
         } else {
-            this.maxSped = 9999;
+            this.maxSped = 350;
         }
     }
+
+    public abstract void refill();
 
     @Override
     public String toString() {

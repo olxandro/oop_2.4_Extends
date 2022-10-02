@@ -15,5 +15,7 @@ public class Main {
         System.out.println(two);
         Bus three = new Bus("third","ikarus",1986,"rus","red",95);
         System.out.println(three);
+
+        one.refill();
     }
 }
