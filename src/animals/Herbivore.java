@@ -1,12 +1,12 @@
-package Animals;
+package animals;
 
 import java.util.Objects;
 
-public class Herbivores extends Mammals {
+public class Herbivore extends Mammal {
     private String eat;
 
 
-    public Herbivores(String name, Integer age, String livingEnvironment, Integer speed, String eat) {
+    public Herbivore(String name, Integer age, String livingEnvironment, Integer speed, String eat) {
         super(name, age, livingEnvironment, speed);
         setEat(eat);
     }

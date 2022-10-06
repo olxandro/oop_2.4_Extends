@@ -1,8 +1,8 @@
-package Animals;
+package animals;
 
-public class Amphibians extends Animals{
+public class Amphibian extends Animal {
 
-    public Amphibians(String name, Integer age, String livingEnvironment) {
+    public Amphibian(String name, Integer age, String livingEnvironment) {
         super(name, age, livingEnvironment);
     }
 

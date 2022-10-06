@@ -1,8 +1,8 @@
-package Animals;
+package animals;
 
 import java.util.Objects;
 
-public class Mammals extends Animals {
+public class Mammal extends Animal {
     private Integer speed;
 
     public final Integer getSpeed() {
@@ -17,7 +17,7 @@ public class Mammals extends Animals {
         }
     }
 
-    public Mammals(String name, Integer age, String livingEnvironment, Integer speed) {
+    public Mammal(String name, Integer age, String livingEnvironment, Integer speed) {
         super(name, age, livingEnvironment);
         setSpeed(speed);
 
@@ -47,8 +47,8 @@ public class Mammals extends Animals {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Mammals mammals = (Mammals) o;
-        return Objects.equals(speed, mammals.speed);
+        Mammal mammal = (Mammal) o;
+        return Objects.equals(speed, mammal.speed);
     }
 
     @Override

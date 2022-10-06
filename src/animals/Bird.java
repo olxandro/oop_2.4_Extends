@@ -1,8 +1,8 @@
-package Animals;
+package animals;
 
-public class Birds extends Animals{
+public class Bird extends Animal {
 
-    public Birds(String name, Integer age, String livingEnvironment) {
+    public Bird(String name, Integer age, String livingEnvironment) {
         super(name, age, livingEnvironment);
     }
 

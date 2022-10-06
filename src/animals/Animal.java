@@ -1,8 +1,8 @@
-package Animals;
+package animals;
 
 import java.util.Objects;
 
-public abstract class Animals {
+public abstract class Animal {
     private String name;
     private Integer age;
     private String livingEnvironment;
@@ -13,7 +13,7 @@ public abstract class Animals {
 
     public abstract void going();
 
-    public Animals(String name, Integer age, String livingEnvironment) {
+    public Animal(String name, Integer age, String livingEnvironment) {
         setName(name);
         setAge(age);
         setLivingEnvironment(livingEnvironment);
@@ -57,8 +57,8 @@ public abstract class Animals {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Animals animals = (Animals) o;
-        return Objects.equals(name, animals.name) && Objects.equals(age, animals.age) && Objects.equals(livingEnvironment, animals.livingEnvironment);
+        Animal animal = (Animal) o;
+        return Objects.equals(name, animal.name) && Objects.equals(age, animal.age) && Objects.equals(livingEnvironment, animal.livingEnvironment);
     }
 
     @Override

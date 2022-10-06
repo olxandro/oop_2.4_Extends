@@ -1,11 +1,11 @@
-package Animals;
+package animals;
 
 import java.util.Objects;
 
-public class Flightless extends Birds{
+public class Flightles extends Bird {
 
     private String movement;
-    public Flightless(String name, Integer age, String livingEnvironment,String movement) {
+    public Flightles(String name, Integer age, String livingEnvironment, String movement) {
         super(name, age, livingEnvironment);
         setMovement(movement);
 
@@ -30,7 +30,7 @@ public class Flightless extends Birds{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Flightless that = (Flightless) o;
+        Flightles that = (Flightles) o;
         return Objects.equals(movement, that.movement);
     }
 
